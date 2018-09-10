@@ -8,5 +8,5 @@ Randomly picking up kanji
 
 ```sh
 ghc random.hs
-cat kanji.txt | ./random.hs
+./random.hs kanji.txt
 ```
