@@ -1,5 +1,3 @@
-import Data.List hiding (insert)
-import Data.Map hiding (foldl)
 import System.Random
 import System.Environment
 import Shuffle

@@ -7,6 +7,7 @@ Little tools helping to learn kanji
 Randomly picking up kanji
 
 ```sh
-ghc random.hs
-./random.hs kanji.txt
+$ cabal configure
+$ cabal build
+$ cabal run
 ```
