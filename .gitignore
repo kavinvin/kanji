@@ -1,3 +1,5 @@
-.DS_Store
-dist/
+.stack-work/
+kanji.cabal
+*~
 *.swp
+.DS_Store
