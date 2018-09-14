@@ -1,5 +1,5 @@
-.stack-work/
-kanji.cabal
-*~
 *.swp
 .DS_Store
+dist/
+dist-newstyle/
+.ghc*
