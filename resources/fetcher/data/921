@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='text/html;charset=UTF-8' http-equiv='content-type'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"7003683092","applicationID":"21271","transactionName":"Jg5bQ0EKCA5UQk1cUxUAW1JAADsRSF0AWV4WTkZfXBI=","queueTime":0,"applicationTime":23,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<title>
+食 (Kanji for eat)
+|
+KANJIDAMAGE
+</title>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="CTxfb9cMvUiqqUREKo5GAYOaNp+bpJU115M2KcE6kHs=" name="csrf-token" />
+<link href="/assets/application-bd822dcf08a88800b93ec563924bd26c.css" media="all" rel="stylesheet" type="text/css" />
+<script src="/assets/application-425928cbe6be55fe527562b4436651e3.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link href='http://fonts.googleapis.com/css?family=Londrina+Solid' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="/favicon.ico" />
+<meta property="fb:app_id" content="122407024560957"/>
+<meta content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' name='viewport'>
+<meta content='食 is the kanji for eat. Learn it and other kanji with our unique combination of vulgar humor and logic.' name='description'>
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12423647-1']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+          <script type='text/javascript'>
+            var mpq = [];
+            mpq.push(["init", "c9b49675ff5c8dd8c73e0b5c73987bfc"]);
+            (function(){var b,a,e,d,c;b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=(document.location.protocol==="https:"?"https:":"http:")+"//api.mixpanel.com/site_media/js/api/mixpanel.js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);e=function(f){return function(){mpq.push([f].concat(Array.prototype.slice.call(arguments,0)))}};d=["track","track_links","track_forms","register","register_once","identify","name_tag","set_config"];for(c=0;c<d.length;c++){mpq[d[c]]=e(d[c])}})();
+          </script>
+<script type='text/javascript'>try {mpq.push(["register", {}]);} catch(err) {}</script></head>
+<body>
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=122407024560957";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class='navbar navbar-fixed-top navbar-inverse'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<a href="/" class="brand"><img alt="Kanjidamage" class="logo" src="/assets/kanjidamage-69b6c6692a0c83fe7f1b41590e6e5c1a.png" />
+KANJIDAMAGE
+</a><div class='nav-collapse'>
+<ul class='nav'>
+<li><a href="/introduction">Intro</a></li>
+<li><a href="/kanji_facts">Kanji facts</a></li>
+<li><a href="/howto">How to</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/japanese_symbols">Kanji</a></li>
+<li><a href="/radicals">Radicals</a></li>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+Appendix
+</a>
+<ul class='dropdown-menu'>
+<li><a href="/appendix/onyomikeywords">Onyomi</a></li>
+<li><a href="/appendix/illpairs">Ill pairs</a></li>
+<li><a href="/appendix/dupes">Dupes</a></li>
+<li><a href="/articles">Articles</a></li>
+<li><a href="/appendix/longshortvowels">Long short vowels</a></li>
+</ul>
+</li>
+<li><a href="/synonyms">Synonyms</a></li>
+<li><a href="http://kanjidamage.fr.yuku.com/forums/2/kanjidamage-forums">Forum</a></li>
+</ul>
+<div class='pull-right'>
+<form accept-charset="UTF-8" action="/kanji/search" class="navbar-search pull-right" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<input class="search-query" id="q" name="q" placeholder="Search" type="text" />
+</form>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='container'>
+</div>
+<div class='container'><div class="adsense">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- kanjiresponsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3566358308304401"
+     data-ad-slot="3615792576"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div class='row navigation-header'>
+<div class='span2'>
+<a href="/kanji/920-scheme-%E4%BC%81">← Previous
+</a></div>
+<div class='span8 text-centered'>
+
+Number
+944
+</div>
+<div class='span2 text-righted'>
+<a href="/kanji/922-drink-%E9%A3%B2">Next
+→
+</a></div>
+</div>
+<div class='row'>
+<div class='span8'>
+<h1>
+<span class='kanji_character'>食</span>
+<span class='translation'>eat</span>
+</h1>
+<a href="/kanji/908-peaked-roof" class="component"><img alt="Peaked-roof" src="/assets/radsmall/peaked-roof-fd1ffcd1100cdce74ff74442cf552fdf.jpg" /></a>
+(peaked roof)
+ + <a href="/kanji/775-good-%E8%89%AF" class="component">良</a>
+(good)
+
+</div>
+<div class='span4 text-righted'>
+<span class="usefulness-stars" title="5 out of 5 stars">★★★★★</span>
+<div>9 strokes</div>
+<div><a href="/tags/25" class="label label-info">SYMBOLIC</a></div>
+</div>
+</div>
+<div class='row'>
+<div class='span12'>
+<div class='description'>
+SYMBOLIC 2/3 of the time. 
+</div>
+<h2>Onyomi</h2>
+<table class='definition'>
+<tr>
+<td>
+<span class='onyomi'>SHOKU</span>
+</td>
+<td>
+<p>I was <span class="onyomi">SHOCKED</span> when the dude <span class="translation">ate</span> like Jello with eels in it. </p>
+</td>
+</tr>
+</table>
+<h2>Mnemonic</h2>
+<table class='definition'>
+<tr>
+<td></td>
+<td>
+<p>It's <span class="component">good</span> to <span class="translation">eat</span> in a restaurant with a <span class="component">peaked roof</span>. Shows class.</p>
+</td>
+</tr>
+</table>
+<h2>Kunyomi</h2>
+<table class='definition'>
+<tr>
+<td>
+<span class='kanji_character'>たべ*る</span>
+</td>
+<td>
+eat
+
+<br>
+<span class="usefulness-stars" title="5 out of 5 stars">★★★★★</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class='kanji_character'>く＊う</span>
+</td>
+<td>
+to devour!!! it's kind of a more mean way of saying 'to eat.'- most of the negative, dark expressions involving eating use KUU rather than TABERU. Also - very seldom - it means to make a living, as in the English phrase, 'You gotta work to eat.'
+
+<br>
+<span class="usefulness-stars" title="2 out of 5 stars">★★☆☆☆</span>
+</td>
+</tr>
+</table>
+<h2>Jukugo</h2>
+<table class='definition'><tr>
+<td>
+<ruby>
+<span class='kanji_character'><ruby>食べ物<rp>(</rp><rt>たべもの</rt><rp>)</rp></ruby></span>
+</ruby>
+</td>
+<td>
+<p>
+food
+<span class="usefulness-stars" title="5 out of 5 stars">★★★★★</span>
+
+<br>
+<a href="/kanji/921-eat-%E9%A3%9F" class="component">食</a> (eat) + <a href="/kanji/1201-animal-thing-%E7%89%A9" class="component">物</a> (animal / thing)
+ = 食べ物 (food)
+</p>
+<p>food. Can be used of the ingredients OR the finished, cooked product.</p>
+
+</td>
+</tr>
+<tr>
+<td>
+<ruby>
+<span class='kanji_character'><ruby>和食<rp>(</rp><rt>わしょく</rt><rp>)</rp></ruby></span>
+</ruby>
+</td>
+<td>
+<p>
+Japanese-style food
+<span class="usefulness-stars" title="3 out of 5 stars">★★★☆☆</span>
+
+<br>
+<a href="/kanji/369-peace-japan-%E5%92%8C" class="component">和</a> (peace/ Japan) + <a href="/kanji/921-eat-%E9%A3%9F" class="component">食</a> (eat)
+ = 和食 (Japanese-style food)
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<ruby>
+<span class='kanji_character'><ruby>洋食<rp>(</rp><rt>ようしょく</rt><rp>)</rp></ruby></span>
+</ruby>
+</td>
+<td>
+<p>
+western food
+<span class="usefulness-stars" title="2 out of 5 stars">★★☆☆☆</span>
+
+<br>
+<a href="/kanji/872-pacific-ocean-the-west-%E6%B4%8B" class="component">洋</a> (Pacific Ocean / the West) + <a href="/kanji/921-eat-%E9%A3%9F" class="component">食</a> (eat)
+ = 洋食 (western food)
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<ruby>
+<span class='kanji_character'><ruby>軽食<rp>(</rp><rt>けいしょく</rt><rp>)</rp></ruby></span>
+</ruby>
+</td>
+<td>
+<p>
+light meal, snack
+<span class="usefulness-stars" title="1 out of 5 stars">★☆☆☆☆</span>
+
+<br>
+<a href="/kanji/1088-lightweight-%E8%BB%BD" class="component">軽</a> (lightweight) + <a href="/kanji/921-eat-%E9%A3%9F" class="component">食</a> (eat)
+ = 軽食 (light meal, snack)
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<ruby>
+<span class='kanji_character'><ruby>人食い<rp>(</rp><rt>ひとくい</rt><rp>)</rp></ruby></span>
+<span class='particles'>xxx</span>
+</ruby>
+</td>
+<td>
+<p>
+a man-eating XXX.
+<span class="usefulness-stars" title="1 out of 5 stars">★☆☆☆☆</span>
+
+<br>
+<a href="/kanji/61-person-%E4%BA%BA" class="component">人</a> (person) + <a href="/kanji/921-eat-%E9%A3%9F" class="component">食</a> (eat)
+ = 人食い (a man-eating XXX.)
+</p>
+</td>
+</tr>
+</table>
+<h2>Used In</h2>
+<ul class='lacidar'>
+<li><a href="/kanji/922-drink-%E9%A3%B2">飲</a></li>
+<li><a href="/kanji/923-decorate-%E9%A3%BE">飾</a></li>
+<li><a href="/kanji/924-rice-meal-%E9%A3%AF">飯</a></li>
+<li><a href="/kanji/981-keep-a-pet-%E9%A3%BC">飼</a></li>
+<li><a href="/kanji/1286-starve-%E9%A3%A2">飢</a></li>
+<li><a href="/kanji/1416-get-sick-of-%E9%A3%BD">飽</a></li>
+<li><a href="/kanji/1614-big-hall-%E9%A4%A8">館</a></li>
+</ul>
+</div>
+</div>
+<div class='row'>
+<div class='span12'>
+<h2>Synonyms</h2>
+<table class='table'>
+<tr>
+<td>
+<a href="/synonyms/125-differ">differ</a>
+<br>
+異なる
+&nbsp;&nbsp;
+差
+&nbsp;&nbsp;
+食い違い
+&nbsp;&nbsp;
+相違
+&nbsp;&nbsp;
+間隔
+&nbsp;&nbsp;
+区別
+&nbsp;&nbsp;
+距離
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<a href="/synonyms/140-eat">eat</a>
+<br>
+食べる
+&nbsp;&nbsp;
+食う
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<a href="/synonyms/423-rice-or-food">rice or food</a>
+<br>
+米
+&nbsp;&nbsp;
+ご飯
+&nbsp;&nbsp;
+食べ物
+&nbsp;&nbsp;
+料理
+&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+</div>
+<footer>
+&copy; 2009-2018
+<a href="http://www.hellodamage.com/top/">Hello Damage</a>
+</footer>
+</body>
+</html>

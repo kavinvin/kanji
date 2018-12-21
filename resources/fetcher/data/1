@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='text/html;charset=UTF-8' http-equiv='content-type'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"7003683092","applicationID":"21271","transactionName":"Jg5bQ0EKCA5UQk1cUxUAW1JAADsRSF0AWV4WTkZfXBI=","queueTime":0,"applicationTime":68,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<title>
+一 (Kanji for one)
+|
+KANJIDAMAGE
+</title>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="Om/W+zh8hHYxQpsjvyMgOwzygK0xayt/AYCxnFuUjN0=" name="csrf-token" />
+<link href="/assets/application-bd822dcf08a88800b93ec563924bd26c.css" media="all" rel="stylesheet" type="text/css" />
+<script src="/assets/application-425928cbe6be55fe527562b4436651e3.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link href='http://fonts.googleapis.com/css?family=Londrina+Solid' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="/favicon.ico" />
+<meta property="fb:app_id" content="122407024560957"/>
+<meta content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' name='viewport'>
+<meta content='一 is the kanji for one. Learn it and other kanji with our unique combination of vulgar humor and logic.' name='description'>
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12423647-1']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+          <script type='text/javascript'>
+            var mpq = [];
+            mpq.push(["init", "c9b49675ff5c8dd8c73e0b5c73987bfc"]);
+            (function(){var b,a,e,d,c;b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=(document.location.protocol==="https:"?"https:":"http:")+"//api.mixpanel.com/site_media/js/api/mixpanel.js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);e=function(f){return function(){mpq.push([f].concat(Array.prototype.slice.call(arguments,0)))}};d=["track","track_links","track_forms","register","register_once","identify","name_tag","set_config"];for(c=0;c<d.length;c++){mpq[d[c]]=e(d[c])}})();
+          </script>
+<script type='text/javascript'>try {mpq.push(["register", {}]);} catch(err) {}</script></head>
+<body>
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=122407024560957";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class='navbar navbar-fixed-top navbar-inverse'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<a href="/" class="brand"><img alt="Kanjidamage" class="logo" src="/assets/kanjidamage-69b6c6692a0c83fe7f1b41590e6e5c1a.png" />
+KANJIDAMAGE
+</a><div class='nav-collapse'>
+<ul class='nav'>
+<li><a href="/introduction">Intro</a></li>
+<li><a href="/kanji_facts">Kanji facts</a></li>
+<li><a href="/howto">How to</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/japanese_symbols">Kanji</a></li>
+<li><a href="/radicals">Radicals</a></li>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+Appendix
+</a>
+<ul class='dropdown-menu'>
+<li><a href="/appendix/onyomikeywords">Onyomi</a></li>
+<li><a href="/appendix/illpairs">Ill pairs</a></li>
+<li><a href="/appendix/dupes">Dupes</a></li>
+<li><a href="/articles">Articles</a></li>
+<li><a href="/appendix/longshortvowels">Long short vowels</a></li>
+</ul>
+</li>
+<li><a href="/synonyms">Synonyms</a></li>
+<li><a href="http://kanjidamage.fr.yuku.com/forums/2/kanjidamage-forums">Forum</a></li>
+</ul>
+<div class='pull-right'>
+<form accept-charset="UTF-8" action="/kanji/search" class="navbar-search pull-right" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<input class="search-query" id="q" name="q" placeholder="Search" type="text" />
+</form>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='container'>
+</div>
+<div class='container'><div class="adsense">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- kanjiresponsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3566358308304401"
+     data-ad-slot="3615792576"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div class='row navigation-header'>
+<div class='span2'>
+&nbsp;
+</div>
+<div class='span8 text-centered'>
+<img alt="Flag" src="/assets/flag-134fac1141adc7de72fc6f699acb7ea7.jpg" />
+Number
+1
+</div>
+<div class='span2 text-righted'>
+<a href="/kanji/2-two-%E4%BA%8C">Next
+→
+</a></div>
+</div>
+<div class='row'>
+<div class='span8'>
+<h1>
+<span class='kanji_character'>一</span>
+<span class='translation'>one/line radical</span>
+</h1>
+
+</div>
+<div class='span4 text-righted'>
+<span class="usefulness-stars" title="5 out of 5 stars">★★★★★</span>
+<div>1 stroke</div>
+<div><a href="/tags/18" class="label label-info">PK</a><a href="/tags/19" class="label label-info">PN</a><a href="/tags/28" class="label label-info">DUH</a></div>
+</div>
+</div>
+<div class='row'>
+<div class='span12'>
+<div class='description'>
+<p><img src="/visualaids/1eazy.jpg">
+</div>
+<h2>Onyomi</h2>
+<table class='definition'>
+<tr>
+<td>
+<span class='onyomi'>ICHI, ITSU</span>
+</td>
+<td>
+<p>"<span class="onyomi">Eazy</span>-e's debut album "<span class="onyomi">EAZY</span> duz it" was so good, <span class="onyomi">IT'S</span> going to go to number <span class="translation">one</span> on the charts."</p>
+</td>
+</tr>
+</table>
+<h2>Mnemonic</h2>
+<table class='definition'>
+<tr>
+<td></td>
+<td>
+</td>
+</tr>
+</table>
+<h2>Kunyomi</h2>
+<table class='definition'>
+<tr>
+<td>
+<span class='kanji_character'>ひと*つ</span>
+</td>
+<td>
+one thing
+
+<br>
+<span class="usefulness-stars" title="4 out of 5 stars">★★★★☆</span>
+</td>
+</tr>
+</table>
+<h2>Jukugo</h2>
+<table class='definition'><tr>
+<td>
+<ruby>
+<span class='kanji_character'><ruby>もう一度<rp>(</rp><rt>もういちど</rt><rp>)</rp></ruby></span>
+</ruby>
+</td>
+<td>
+<p>
+one more time!
+<span class="usefulness-stars" title="5 out of 5 stars">★★★★★</span>
+
+<br>
+<a href="/kanji/1-one-line-radical-%E4%B8%80" class="component">一</a> (one) + <a href="/kanji/1144-times-%E5%BA%A6" class="component">度</a> (times)
+ = もう一度 (one more time!)
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<ruby>
+<span class='kanji_character'><ruby>一緒<rp>(</rp><rt>いっしょ</rt><rp>)</rp></ruby></span>
+<span class='particles'>に</span>
+</ruby>
+</td>
+<td>
+<p>
+together
+<span class="usefulness-stars" title="5 out of 5 stars">★★★★★</span>
+
+<br>
+<a href="/kanji/1-one-line-radical-%E4%B8%80" class="component">一</a> (one) + <a href="/kanji/257-together-%E7%B7%92" class="component">緒</a> (together)
+ = 一緒 (together)
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<ruby>
+<span class='kanji_character'><ruby>一人<rp>(</rp><rt>ひとり</rt><rp>)</rp></ruby></span>
+<span class='particles'>で</span>
+</ruby>
+</td>
+<td>
+<p>
+one person, alone
+<span class="usefulness-stars" title="5 out of 5 stars">★★★★★</span>
+<a href="/tags/8" class="label label-info">FP</a>
+<br>
+<a href="/kanji/1-one-line-radical-%E4%B8%80" class="component">一</a> (one) + <a href="/kanji/61-person-%E4%BA%BA" class="component">人</a> (person)
+ = 一人 (one person, alone)
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<ruby>
+<span class='kanji_character'><ruby>一般的<rp>(</rp><rt>いっぱんてき</rt><rp>)</rp></ruby></span>
+<span class='particles'>な</span>
+</ruby>
+</td>
+<td>
+<p>
+ordinary
+<span class="usefulness-stars" title="5 out of 5 stars">★★★★★</span>
+
+<br>
+<a href="/kanji/1-one-line-radical-%E4%B8%80">一</a><a href="/kanji/1451-general-overall-%E8%88%AC">般</a> (generally, commonly) + <a href="/kanji/1430-motivation-al-%E7%9A%84" class="component">的</a> (motivation / &#x27;-al&#x27;)
+ = 一般的 (ordinary)
+</p>
+<p>One of many many Japanese words for 'normal.' The nuance of いっぱんてき　is ordinary, non-special - as opposed to a member of a special group of people of things. 一般的な人 means, an average person. As in, 'an average person is not allowed in this Yakuza bar.'</p>
+
+</td>
+</tr>
+<tr>
+<td>
+<ruby>
+<span class='kanji_character'><ruby>一日<rp>(</rp><rt>ついたち</rt><rp>)</rp></ruby></span>
+</ruby>
+</td>
+<td>
+<p>
+first day of the month
+<span class="usefulness-stars" title="4 out of 5 stars">★★★★☆</span>
+<a href="/tags/8" class="label label-info">FP</a>
+<br>
+<a href="/kanji/1-one-line-radical-%E4%B8%80" class="component">一</a> (one) + <a href="/kanji/23-sun-day-%E6%97%A5" class="component">日</a> (sun, day)
+ = 一日 (first day of the month)
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<ruby>
+<span class='kanji_character'><ruby>一番<rp>(</rp><rt>いちばん</rt><rp>)</rp></ruby></span>
+</ruby>
+</td>
+<td>
+<p>
+number one!
+<span class="usefulness-stars" title="4 out of 5 stars">★★★★☆</span>
+<a href="/tags/15" class="label label-info">NEO</a>
+<br>
+<a href="/kanji/1-one-line-radical-%E4%B8%80" class="component">一</a> (one) + <a href="/kanji/395-number-%E7%95%AA" class="component">番</a> (number)
+ = 一番 (number one!)
+</p>
+<p>the best! Number one!</p>
+
+</td>
+</tr>
+</table>
+<h2>Used In</h2>
+<ul class='lacidar'>
+<li><a href="/kanji/5-child-%E5%AD%90">子</a></li>
+<li><a href="/kanji/11-say-%E8%A8%80">言</a></li>
+<li><a href="/kanji/13-un-%E4%B8%8D">不</a></li>
+<li><a href="/kanji/20-seven-%E4%B8%83">七</a></li>
+<li><a href="/kanji/28-former-%E6%97%A7">旧</a></li>
+<li><a href="/kanji/30-danna-husband-%E6%97%A6">旦</a></li>
+<li><a href="/kanji/85-10000-%E4%B8%87">万</a></li>
+<li><a href="/kanji/120-death-%E6%AD%BB">死</a></li>
+<li><a href="/kanji/99-surely-%E5%BF%85">必</a></li>
+<li><a href="/kanji/123-above-%E4%B8%8A">上</a></li>
+<li><a href="/kanji/127-residence-%E5%AE%85">宅</a></li>
+<li><a href="/kanji/588-husband-%E5%A4%AB">夫</a></li>
+<li><a href="/kanji/1244-decapitated-cow"><img alt="Order-rule" src="/assets/radREALLYsmall/order-rule-8248612f823fc767d0edd33477cbbf9c.jpg" /></a></li>
+<li><a href="/kanji/183-round-%E4%B8%B8">丸</a></li>
+<li><a href="/kanji/193-a-little-amount-%E5%B0%91">少</a></li>
+<li><a href="/kanji/219-group-tribe-%E7%B3%BB">系</a></li>
+<li><a href="/kanji/229-thousand-%E5%8D%83">千</a></li>
+<li><a href="/kanji/252-dizzy"><img alt="Dizzy" src="/assets/radREALLYsmall/dizzy-dd4aace1d489c6214e0489369c260944.jpg" /></a></li>
+<li><a href="/kanji/280-correct-%E6%AD%A3">正</a></li>
+<li><a href="/kanji/317-hill-%E4%B8%98">丘</a></li>
+<li><a href="/kanji/338-book-the-real-%E6%9C%AC">本</a></li>
+<li><a href="/kanji/367-wheat"><img alt="Wheat" src="/assets/radREALLYsmall/wheat-9d612d6a9d0e6badd990013ef75a5842.jpg" /></a></li>
+<li><a href="/kanji/380-the-tip-%E6%9C%AB">末</a></li>
+<li><a href="/kanji/381-not-yet-%E6%9C%AA">未</a></li>
+<li><a href="/kanji/1439-oversee-%E7%9B%A3">監</a></li>
+<li><a href="/kanji/1499-wine-bottle"><img alt="Wine-bottle" src="/assets/radREALLYsmall/wine-bottle-167e91d008188a8ec1a4f22e122ca65a.jpg" /></a></li>
+<li><a href="/kanji/415-risk"><img alt="Risk" src="/assets/radREALLYsmall/risk-dbb039a2d6740bc083a3765a8a0b9720.jpg" /></a></li>
+<li><a href="/kanji/324-key"><img alt="Bamboo-key" src="/assets/radREALLYsmall/bamboo-key-b82ebf38834eadc0b5077af1bd771165.jpg" /></a></li>
+<li><a href="/kanji/1367-humbly-say-god-radical-%E7%94%B3">申</a></li>
+<li><a href="/kanji/394-comefuture-%E6%9D%A5">来</a></li>
+<li><a href="/kanji/420-from-china-radical"><img alt="Kanji-no-kan" src="/assets/radREALLYsmall/kanji-no-kan-55cabadb74fed5582b330a152738f1e1.jpg" /></a></li>
+<li><a href="/kanji/444-king-%E7%8E%8B">王</a></li>
+<li><a href="/kanji/489-middle-%E4%B8%AD">中</a></li>
+<li><a href="/kanji/493-insizzect-%E8%99%AB">虫</a></li>
+<li><a href="/kanji/505-door-%E6%88%B8">戸</a></li>
+<li><a href="/kanji/514-leatherrevolution-%E9%9D%A9">革</a></li>
+<li><a href="/kanji/571-original-%E5%85%83">元</a></li>
+<li><a href="/kanji/578-liquor-%E9%85%92">酒</a></li>
+<li><a href="/kanji/1024-pull-out-hand-over-%E5%87%BA">出</a></li>
+<li><a href="/kanji/1591-all-over-again-%E6%9B%B4">更</a></li>
+<li><a href="/kanji/1593-use-%E4%BD%BF">使</a></li>
+<li><a href="/kanji/1667-wife-%E5%A6%BB">妻</a></li>
+<li><a href="/kanji/1701-shoddy-%E4%B9%8F">乏</a></li>
+<li><a href="/kanji/774-declinewane-%E8%A1%B0">衰</a></li>
+<li><a href="/kanji/825-belt-%E5%B8%AF">帯</a></li>
+<li><a href="/kanji/880-heaven-%E5%A4%A9">天</a></li>
+<li><a href="/kanji/1108-crows"><img alt="Crows" src="/assets/radREALLYsmall/crows-e4ca6a7bb5747fa8d328fcd4c0da1917.jpg" /></a></li>
+<li><a href="/kanji/1118-master-a-skill-%E4%BF%AE">修</a></li>
+<li><a href="/kanji/1192-noon-%E5%8D%88">午</a></li>
+<li><a href="/kanji/1210-color-%E8%89%B2">色</a></li>
+<li><a href="/kanji/1400-dragon-radical"><img alt="Dragon" src="/assets/radREALLYsmall/dragon-6eed889572b9dbd8f5fa0da3f9c435fa.jpg" /></a></li>
+<li><a href="/kanji/625-reach-amount-to-%E5%8F%8A">及</a></li>
+<li><a href="/kanji/651-bestow-%E4%B8%8E">与</a></li>
+<li><a href="/kanji/662-military-%E6%AD%A6">武</a></li>
+<li><a href="/kanji/665-spear"><img alt="Spearthree" src="/assets/radREALLYsmall/spearthree-9b6f801d798cbc8a4dc1dc98e48ef41e.jpg" /></a></li>
+<li><a href="/kanji/685-vassal-%E8%87%A3">臣</a></li>
+<li><a href="/kanji/1763-hitler"><img alt="Hitler" src="/assets/radREALLYsmall/hitler-8c614439bee7cf238e60fdc90728b2be.jpg" /></a></li>
+<li><a href="/kanji/602-nest"><img alt="Nest" src="/assets/radREALLYsmall/nest-8c653c76ed1e7718f57e0c8788786a13.jpg" /></a></li>
+<li><a href="/kanji/898-pull-%E5%BC%95">引</a></li>
+<li><a href="/kanji/1029-society-%E4%B8%96">世</a></li>
+</ul>
+</div>
+</div>
+<div class='row'>
+<div class='span12'>
+<h2>Synonyms</h2>
+<table class='table'>
+<tr>
+<td>
+<a href="/synonyms/10-all-the-more-furthermore">all the more, furthermore</a>
+<br>
+一層
+&nbsp;&nbsp;
+尚更
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<a href="/synonyms/100-correspond-to">correspond to</a>
+<br>
+一致
+&nbsp;&nbsp;
+該当
+&nbsp;&nbsp;
+当たる
+&nbsp;&nbsp;
+適応
+&nbsp;&nbsp;
+意味する
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<a href="/synonyms/252-instantly">instantly</a>
+<br>
+瞬間
+&nbsp;&nbsp;
+一瞬
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<a href="/synonyms/322-normal">normal</a>
+<br>
+普通な
+&nbsp;&nbsp;
+並みの
+&nbsp;&nbsp;
+普段
+&nbsp;&nbsp;
+一般的な
+&nbsp;&nbsp;
+尋常
+&nbsp;&nbsp;
+典型的
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<a href="/synonyms/332-on-the-other-hand">on the other hand</a>
+<br>
+その反面、xxx
+&nbsp;&nbsp;
+xxx一方
+&nbsp;&nbsp;
+他方で yyy
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<a href="/synonyms/333-once-again">once again</a>
+<br>
+また
+未だ
+&nbsp;&nbsp;
+もう一度
+&nbsp;&nbsp;
+もう一回
+&nbsp;&nbsp;
+もういっぺん
+</td>
+</tr>
+<tr>
+<td>
+<a href="/synonyms/334-one-person">one person</a>
+<br>
+一人
+&nbsp;&nbsp;
+独り
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<a href="/synonyms/355-perhaps">perhaps</a>
+<br>
+たしか～
+ひょっとして～
+万が一～
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<a href="/synonyms/526-to-do-your-best-to-try-your-hardest">to do your best, to try your hardest</a>
+<br>
+一生懸命
+&nbsp;&nbsp;
+努力
+&nbsp;&nbsp;
+必死
+&nbsp;&nbsp;
+奮闘
+&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+</div>
+<footer>
+&copy; 2009-2018
+<a href="http://www.hellodamage.com/top/">Hello Damage</a>
+</footer>
+</body>
+</html>

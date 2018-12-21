@@ -1,23 +1,25 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
-import           HelloApi
-import           Network.Wai
-import           Network.Wai.Handler.Warp
-import           Servant
-import           Servant.API()
+import KanjiApi
+import Network.Wai
+import Network.Wai.Handler.Warp
+import Servant
+import Servant.API()
 
-server :: Server HelloAPI
-server = hello :<|> user
-    where
-        hello = return "Hello world"
-        user n a = return $ User n a
+server :: Server KanjiApi
+server = return "wow"
+    :<|> return [Kanji "1" "2" "3"]
 
 app :: Application
-app = serve helloApi server
+app = serve kanjiApi server
 
 main :: IO ()
 main = do
     let port = 9000
+    kanji <- findAllKanji
+    case kanji of
+        Just a -> putStrLn (character a)
+        Nothing -> putStrLn "Nothing here"
     putStrLn $ "Listening to port " ++ show port
     run port app

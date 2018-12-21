@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta content='text/html;charset=UTF-8' http-equiv='content-type'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"7003683092","applicationID":"21271","transactionName":"Jg5bQ0EKCA5UQk1cUxUAW1JAADsRSF0AWV4WTkZfXBI=","queueTime":0,"applicationTime":21,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<title>
+心 (Kanji for heart)
+|
+KANJIDAMAGE
+</title>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="VvZ9GvFyhlZS8a4PxvvMxR0MG68R5muPC1+J3s+Qdho=" name="csrf-token" />
+<link href="/assets/application-bd822dcf08a88800b93ec563924bd26c.css" media="all" rel="stylesheet" type="text/css" />
+<script src="/assets/application-425928cbe6be55fe527562b4436651e3.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link href='http://fonts.googleapis.com/css?family=Londrina+Solid' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="/favicon.ico" />
+<meta property="fb:app_id" content="122407024560957"/>
+<meta content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' name='viewport'>
+<meta content='心 is the kanji for heart. Learn it and other kanji with our unique combination of vulgar humor and logic.' name='description'>
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12423647-1']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+          <script type='text/javascript'>
+            var mpq = [];
+            mpq.push(["init", "c9b49675ff5c8dd8c73e0b5c73987bfc"]);
+            (function(){var b,a,e,d,c;b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=(document.location.protocol==="https:"?"https:":"http:")+"//api.mixpanel.com/site_media/js/api/mixpanel.js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);e=function(f){return function(){mpq.push([f].concat(Array.prototype.slice.call(arguments,0)))}};d=["track","track_links","track_forms","register","register_once","identify","name_tag","set_config"];for(c=0;c<d.length;c++){mpq[d[c]]=e(d[c])}})();
+          </script>
+<script type='text/javascript'>try {mpq.push(["register", {}]);} catch(err) {}</script></head>
+<body>
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=122407024560957";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class='navbar navbar-fixed-top navbar-inverse'>
+<div class='navbar-inner'>
+<div class='container'>
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<a href="/" class="brand"><img alt="Kanjidamage" class="logo" src="/assets/kanjidamage-69b6c6692a0c83fe7f1b41590e6e5c1a.png" />
+KANJIDAMAGE
+</a><div class='nav-collapse'>
+<ul class='nav'>
+<li><a href="/introduction">Intro</a></li>
+<li><a href="/kanji_facts">Kanji facts</a></li>
+<li><a href="/howto">How to</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/japanese_symbols">Kanji</a></li>
+<li><a href="/radicals">Radicals</a></li>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+Appendix
+</a>
+<ul class='dropdown-menu'>
+<li><a href="/appendix/onyomikeywords">Onyomi</a></li>
+<li><a href="/appendix/illpairs">Ill pairs</a></li>
+<li><a href="/appendix/dupes">Dupes</a></li>
+<li><a href="/articles">Articles</a></li>
+<li><a href="/appendix/longshortvowels">Long short vowels</a></li>
+</ul>
+</li>
+<li><a href="/synonyms">Synonyms</a></li>
+<li><a href="http://kanjidamage.fr.yuku.com/forums/2/kanjidamage-forums">Forum</a></li>
+</ul>
+<div class='pull-right'>
+<form accept-charset="UTF-8" action="/kanji/search" class="navbar-search pull-right" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<input class="search-query" id="q" name="q" placeholder="Search" type="text" />
+</form>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='container'>
+</div>
+<div class='container'><div class="adsense">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- kanjiresponsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3566358308304401"
+     data-ad-slot="3615792576"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div class='row navigation-header'>
+<div class='span2'>
+<a href="/kanji/97-shout-%E5%8F%AB">← Previous
+</a></div>
+<div class='span8 text-centered'>
+<img alt="Flag" src="/assets/flag-134fac1141adc7de72fc6f699acb7ea7.jpg" />
+Number
+98
+</div>
+<div class='span2 text-righted'>
+<a href="/kanji/99-surely-%E5%BF%85">Next
+→
+</a></div>
+</div>
+<div class='row'>
+<div class='span8'>
+<h1>
+<span class='kanji_character'>心</span>
+<span class='translation'>heart</span>
+</h1>
+<a href="/kanji/98-heart-%E5%BF%83" class="component">心</a>
+(heart)
+
+</div>
+<div class='span4 text-righted'>
+<span class="usefulness-stars" title="5 out of 5 stars">★★★★★</span>
+<div>4 strokes</div>
+<div><a href="/tags/18" class="label label-info">PK</a><a href="/tags/25" class="label label-info">SYMBOLIC</a><a href="/tags/34" class="label label-info">MR</a></div>
+</div>
+</div>
+<div class='row'>
+<div class='span12'>
+<div class='description'>
+There are TWO separate mutant radicals.
+All 3 心  radicals are SYMBOLIC for 'emotions.'
+</div>
+<h2>Mutants</h2>
+<table class='definition'>
+<tr>
+<td><img alt="Heartleft" src="/assets/radREALLYsmall/heartleft-61b6d2a4cb9062f5def52427858f88e7.jpg" /></td>
+<td>leftheart</td>
+</tr>
+<tr>
+<td><img alt="Heartbottom" src="/assets/radREALLYsmall/heartbottom-61e6f9cfe7a02078a48790e82e2e128e.jpg" /></td>
+<td>bottomheart</td>
+</tr>
+</table>
+<h2>Onyomi</h2>
+<table class='definition'>
+<tr>
+<td>
+<span class='onyomi'>SHIN</span>
+</td>
+<td>
+</td>
+</tr>
+</table>
+<h2>Mnemonic</h2>
+<table class='definition'>
+<tr>
+<td></td>
+<td>
+<p>Imagine the <span class="onyomi">SHINING</span> sacred <span class="translation"><span class="component">heart</span></span>(心) in all those Mexican pictures:
+<br>
+<div id="dsimg"><img src="/visualaids/heart.jpg"></div></p>
+</td>
+</tr>
+</table>
+<h2>Kunyomi</h2>
+<table class='definition'>
+<tr>
+<td>
+<span class='kanji_character'>こころ</span>
+</td>
+<td>
+heart, metaphorically. 'All my heart' and that kind of good shit.
+
+<br>
+<span class="usefulness-stars" title="5 out of 5 stars">★★★★★</span>
+</td>
+</tr>
+</table>
+<h2>Jukugo</h2>
+<table class='definition'><tr>
+<td>
+<ruby>
+<span class='kanji_character'><ruby>心配<rp>(</rp><rt>しんぱい</rt><rp>)</rp></ruby></span>
+<span class='particles'>する</span>
+</ruby>
+</td>
+<td>
+<p>
+worry
+<span class="usefulness-stars" title="5 out of 5 stars">★★★★★</span>
+
+<br>
+<a href="/kanji/98-heart-%E5%BF%83" class="component">心</a> (heart) + <a href="/kanji/724-distribute-%E9%85%8D" class="component">配</a> (distribute)
+ = 心配 (worry)
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<ruby>
+<span class='kanji_character'><ruby>心臓<rp>(</rp><rt>しんぞう</rt><rp>)</rp></ruby></span>
+</ruby>
+</td>
+<td>
+<p>
+heart
+<span class="usefulness-stars" title="3 out of 5 stars">★★★☆☆</span>
+
+<br>
+<a href="/kanji/98-heart-%E5%BF%83" class="component">心</a> (heart) + <a href="/kanji/749-internal-organ-%E8%87%93" class="component">臓</a> (internal organ)
+ = 心臓 (heart)
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<ruby>
+<span class='kanji_character'><ruby>安心<rp>(</rp><rt>あんしん</rt><rp>)</rp></ruby></span>
+</ruby>
+</td>
+<td>
+<p>
+a feeling of relief
+<span class="usefulness-stars" title="3 out of 5 stars">★★★☆☆</span>
+
+<br>
+<a href="/kanji/128-cheap-safe-%E5%AE%89" class="component">安</a> (cheap / safe) + <a href="/kanji/98-heart-%E5%BF%83" class="component">心</a> (heart)
+ = 安心 (a feeling of relief)
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<ruby>
+<span class='kanji_character'><ruby>愛国心<rp>(</rp><rt>あいこくしん</rt><rp>)</rp></ruby></span>
+</ruby>
+</td>
+<td>
+<p>
+patriotism
+<span class="usefulness-stars" title="2 out of 5 stars">★★☆☆☆</span>
+
+<br>
+<a href="/kanji/610-love-%E6%84%9B" class="component">愛</a> (love) + <a href="/kanji/438-country-%E5%9B%BD" class="component">国</a> (country) + <a href="/kanji/98-heart-%E5%BF%83" class="component">心</a> (heart)
+ = 愛国心 (patriotism)
+</p>
+</td>
+</tr>
+</table>
+<h2>Used In</h2>
+<ul class='lacidar'>
+<li><a href="/kanji/98-heart-%E5%BF%83">心</a></li>
+<li><a href="/kanji/99-surely-%E5%BF%85">必</a></li>
+<li><a href="/kanji/100-get-mad-%E6%80%92">怒</a></li>
+<li><a href="/kanji/101-son-breath-%E6%81%AF">息</a></li>
+<li><a href="/kanji/102-think-%E6%80%9D">思</a></li>
+<li><a href="/kanji/105-busy-%E5%BF%99">忙</a></li>
+<li><a href="/kanji/106-forget-%E5%BF%98">忘</a></li>
+<li><a href="/kanji/110-neglect-egotistic-%E6%85%A2">慢</a></li>
+<li><a href="/kanji/113-bad-%E6%82%AA">悪</a></li>
+<li><a href="/kanji/142-lazy-%E6%80%A0">怠</a></li>
+<li><a href="/kanji/145-looks-like-%E6%85%8B">態</a></li>
+<li><a href="/kanji/157-meaning-%E6%84%8F">意</a></li>
+<li><a href="/kanji/159-recollect-%E6%86%B6">憶</a></li>
+<li><a href="/kanji/1544-close-but-no-cigar-%E6%83%9C">惜</a></li>
+<li><a href="/kanji/1680-listen-to-%E8%81%B4">聴</a></li>
+<li><a href="/kanji/1682-nostalgia-%E6%87%90">懐</a></li>
+<li><a href="/kanji/1683-virtue-%E5%BE%B3">徳</a></li>
+<li><a href="/kanji/173-hide-endure-%E5%BF%8D">忍</a></li>
+<li><a href="/kanji/214-general-total-%E7%B7%8F">総</a></li>
+<li><a href="/kanji/240-yearn-for-%E6%86%A7">憧</a></li>
+<li><a href="/kanji/247-intention-volition-%E5%BF%97">志</a></li>
+<li><a href="/kanji/314-disgrace-%E6%81%A5">恥</a></li>
+<li><a href="/kanji/352-ideaimagination-%E6%83%B3">想</a></li>
+<li><a href="/kanji/379-sorrow-%E6%84%81">愁</a></li>
+<li><a href="/kanji/1259-get-afeared-%E6%80%AF">怯</a></li>
+<li><a href="/kanji/1291-dread-%E6%81%90">恐</a></li>
+<li><a href="/kanji/1307-suspend-gamble-%E6%87%B8">懸</a></li>
+<li><a href="/kanji/1355-cure-%E7%99%92">癒</a></li>
+<li><a href="/kanji/793-hide-%E9%9A%A0">隠</a></li>
+<li><a href="/kanji/471-emotion-%E6%83%85">情</a></li>
+<li><a href="/kanji/433-kindness-%E6%81%A9">恩</a></li>
+<li><a href="/kanji/465-constitution-%E6%86%B2">憲</a></li>
+<li><a href="/kanji/475-sex-essential-nature-%E6%80%A7">性</a></li>
+<li><a href="/kanji/487-regret-%E6%82%94">悔</a></li>
+<li><a href="/kanji/490-loyalty-%E5%BF%A0">忠</a></li>
+<li><a href="/kanji/534-get-indignant-%E6%86%A4">憤</a></li>
+<li><a href="/kanji/550-adapt-%E6%85%A3">慣</a></li>
+<li><a href="/kanji/1382-dum-diddy-dum-dum-%E6%84%9A">愚</a></li>
+<li><a href="/kanji/567-window-%E7%AA%93">窓</a></li>
+<li><a href="/kanji/1575-enlightenment-%E6%82%9F">悟</a></li>
+<li><a href="/kanji/1607-detest-%E6%86%8E">憎</a></li>
+<li><a href="/kanji/1021-do-a-favor-%E6%81%B5">恵</a></li>
+<li><a href="/kanji/1716-deplore-%E6%85%A8">慨</a></li>
+<li><a href="/kanji/1305-refrain-be-prudent-%E6%85%8E">慎</a></li>
+<li><a href="/kanji/755-feeling-%E6%84%9F">感</a></li>
+<li><a href="/kanji/756-regrettable-%E6%86%BE">憾</a></li>
+<li><a href="/kanji/780-hold-a-grudge-%E6%81%A8">恨</a></li>
+<li><a href="/kanji/815-grieve-%E6%86%82">憂</a></li>
+<li><a href="/kanji/858-be-in-a-rush-freaked-out-%E6%85%8C">慌</a></li>
+<li><a href="/kanji/1119-wretched-%E6%83%A8">惨</a></li>
+<li><a href="/kanji/1128-react-%E5%BF%9C">応</a></li>
+<li><a href="/kanji/1090-suspicious-%E6%80%AA">怪</a></li>
+<li><a href="/kanji/1202-to-fall-in-love-with-%E6%83%9A">惚</a></li>
+<li><a href="/kanji/1202-to-fall-in-love-with-%E6%83%9A">惚</a></li>
+<li><a href="/kanji/1356-pleasure-%E6%84%89">愉</a></li>
+<li><a href="/kanji/610-love-%E6%84%9B">愛</a></li>
+<li><a href="/kanji/629-tranquil-%E7%A9%8F">穏</a></li>
+<li><a href="/kanji/633-urgent-%E6%80%A5">急</a></li>
+<li><a href="/kanji/668-be-misguided-or-tempted-%E6%83%91">惑</a></li>
+<li><a href="/kanji/985-pleasant-%E5%BF%AB">快</a></li>
+<li><a href="/kanji/996-console-%E6%85%B0">慰</a></li>
+<li><a href="/kanji/1038-worry-%E6%82%A9">悩</a></li>
+<li><a href="/kanji/1083-sad-%E6%82%B2">悲</a></li>
+<li><a href="/kanji/1096-scary-%E6%80%96">怖</a></li>
+<li><a href="/kanji/903-passion-%E6%81%8B">恋</a></li>
+<li><a href="/kanji/945-concern-%E5%BF%B5">念</a></li>
+<li><a href="/kanji/900-red-%E8%B5%A4">赤</a></li>
+</ul>
+</div>
+</div>
+<div class='row'>
+<div class='span12'>
+<h2>Synonyms</h2>
+<table class='table'>
+<tr>
+<td>
+<a href="/synonyms/128-discreet-prudent">discreet, prudent</a>
+<br>
+弁える
+&nbsp;&nbsp;
+慎重
+&nbsp;&nbsp;
+思慮深い
+&nbsp;&nbsp;
+用心
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<a href="/synonyms/324-novice">novice</a>
+<br>
+素人
+&nbsp;&nbsp;
+初心者
+&nbsp;&nbsp;
+未熟
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<a href="/synonyms/348-passion">passion</a>
+<br>
+情熱
+&nbsp;&nbsp;
+熱心
+&nbsp;&nbsp;
+恋
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<a href="/synonyms/350-pathos-misery-pitifulness">pathos, misery, pitifulness</a>
+<br>
+かわいいそうな
+哀れな
+&nbsp;&nbsp;
+惨めな
+&nbsp;&nbsp;
+哀愁
+&nbsp;&nbsp;
+心細い
+&nbsp;&nbsp;
+悲惨な
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<a href="/synonyms/370-pleasant">pleasant</a>
+<br>
+快い
+&nbsp;&nbsp;
+心地よい
+&nbsp;&nbsp;
+親しい
+&nbsp;&nbsp;
+優しい
+&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+<a href="/synonyms/574-wish">wish</a>
+<br>
+希望
+&nbsp;&nbsp;
+意思
+&nbsp;&nbsp;
+願い
+&nbsp;&nbsp;
+野心
+&nbsp;&nbsp;
+望み
+&nbsp;&nbsp;
+志す
+&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+</div>
+<footer>
+&copy; 2009-2018
+<a href="http://www.hellodamage.com/top/">Hello Damage</a>
+</footer>
+</body>
+</html>
